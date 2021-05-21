@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+* {
+  box-sizing: border-box;
+}
+/* start: global styles */
+body {
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+    background: linear-gradient( #737373, #002a5d, #727272);
+}
+
+
+.container {
+    max-width: 64%;
+    margin: 0 auto;
+    padding: 5px 20px;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #8d24ff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1rem;
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+
+/* end: global styles */
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+/* Hide the images by default */
+.wide-container img {
+  display: none;
+  width: 100%;
+}
+
+.wide-container img.active {
+  display: block;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 41%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  /* transform some pixel to the top */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 20px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 12px 12px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+  border-radius: 0px 0px 20px 0px;
+}
+
+/* Container for image text */
+.caption-container {
+  font-size: 24px;
+  text-align: center;
+  padding: 16px 16px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.row{
+    width: 90%;
+    display: flex;
+    margin: 5px 5%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  margin-right: 10px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.thumb {
+  width:100%;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+
+.thumb.active,
+.thumb:hover {
+  opacity: 1;
+}
+
+/* end: footer styles */
+
+/* start: media queries */
+
+@media (max-width: 768px) {
+  /*  body{
+        overflow: hidden;
+    }*/
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .large-paragraph {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        max-width: 100%;
+    
